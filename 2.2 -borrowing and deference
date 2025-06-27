@@ -1,0 +1,27 @@
+fn main() {
+    let x = 10;
+    let ref_to_x = &x;
+    println!("Value of x: {}", x);
+    println!("Borrowed value (ref_to_x): {}", ref_to_x);
+    println!("Dereferenced value (*ref_to_x): {}", *ref_to_x);
+    let mut y = 20;
+    {
+        let ref_to_y = &mut y; 
+        *ref_to_y += 5; 
+        println!("Inside scope: Mutable reference ref_to_y = {}", ref_to_y);
+    }
+    println!("After modification, y = {}", y);
+    let val = 100;
+    print_borrowed_value(&val);
+
+    let mut z = 50;
+    increment_value(&mut z);
+    println!("After increment, z = {}", z);
+}
+fn print_borrowed_value(val: &i32) {
+    println!("Inside function - borrowed value: {}", val);
+}
+fn increment_value(val: &mut i32) {
+    *val += 1; 
+}
+
