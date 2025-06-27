@@ -1,0 +1,17 @@
+fn main() {
+    let int_val: i32 = 42;
+    let float_val: f64 = int_val as f64;
+    println!(" {} -> {}", int_val, float_val);
+    let original_float: f64 = 3.99;
+    let int_from_float: i32 = original_float as i32;
+    println!("{} -> {}", original_float, int_from_float);
+    let signed_int: i32 = -10;
+    let unsigned_int: u32 = signed_int as u32;
+    println!(" {} -> {}", signed_int, unsigned_int);
+    let ch: char = 'A';
+    let ch_code: u32 = ch as u32;
+    println!("'{}' -> {}", ch, ch_code);
+    let num: u8 = 66;
+    let char_from_num: char = num as char;
+    println!("{} -> '{}'", num, char_from_num);
+}
